@@ -27,7 +27,7 @@ const Jobopenings = () => {
   useEffect(() => {
     const fetchJobOpenings = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/get_job_openings');
+        const response = await axios.get('https://teacher-pool-backend-59rr.onrender.com/get_job_openings');
         setJobOpenings(response.data);
       } catch (error) {
         console.error('Error fetching job openings:', error);
@@ -50,7 +50,7 @@ const Jobopenings = () => {
   const handleSearch = async () => {
     try {
       // Fetch the original job openings data from the server
-      const response = await axios.get('http://localhost:8000/get_job_openings');
+      const response = await axios.get('https://teacher-pool-backend-59rr.onrender.com/get_job_openings');
       const originalJobOpenings = response.data;
 
       // Filter the job openings based on the search term
@@ -91,7 +91,7 @@ const Jobopenings = () => {
   const handleRemoveJob = async (jobOpening) => {
     try {
       console.log("hello nikhil")
-      await axios.patch('http://localhost:8000/remove_job', {
+      await axios.patch('https://teacher-pool-backend-59rr.onrender.com/remove_job', {
         organizationName: jobOpening.organizationName,
         title: jobOpening.title,
         applyUrl: jobOpening.applyUrl,
@@ -110,7 +110,7 @@ const Jobopenings = () => {
   const handleSaveJob = async () => {
     try {
       // Implement API request to save the new job
-      await axios.post('http://localhost:8000/add_job', newJob);
+      await axios.post('https://teacher-pool-backend-59rr.onrender.com/add_job', newJob);
       setShowAddJobPopup(false);
       setNewJob({
         title: '',
@@ -126,7 +126,7 @@ const Jobopenings = () => {
         applyUrl: '',
       });
       // Fetch updated job openings after adding a new job
-      const response = await axios.get('http://localhost:8000/get_job_openings');
+      const response = await axios.get('https://teacher-pool-backend-59rr.onrender.com/get_job_openings');
       setJobOpenings(response.data);
     } catch (error) {
       console.error('Error saving job:', error);
