@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer-container">
         <div className="ft-title">
           <div className="ft-sign">
-            <img src={logo} alt="" />
+            <img  src={logo} alt="" />
           </div>
           Teacher Pool
         </div>

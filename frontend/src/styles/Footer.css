@@ -99,9 +99,9 @@
     letter-spacing: 0.8px;
 }
 
-/* .ft-list-items {
+.ft-list-items {
     list-style-type: none;
-} */
+} 
 .ft-list-items li a {
     text-decoration: none;
     color: #a5a7ac;
@@ -200,4 +200,4 @@
     .ft-social-links {
         margin: 16px 0 0;
     }
-}
+} 

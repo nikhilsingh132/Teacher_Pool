@@ -194,6 +194,7 @@ const Jobopenings = () => {
         ))}
       </div>
 
+
       {showAddJobPopup && (
         <div className="add-job-popup">
           <p className='addjobtitle'>ADD JOB DESCRIPTION</p>
@@ -283,7 +284,7 @@ const Jobopenings = () => {
           </div>
         </div>
       )}
-    </>
+      </>
   );
 };
 

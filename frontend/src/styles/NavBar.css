@@ -11,7 +11,7 @@
 }
 
 .logininfo {
-	color: pink;
+	color: rgb(245, 243, 243);
 }
 
 .nav-container {
@@ -19,7 +19,7 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	max-width: 1500px;
+	max-width: 100%;
 	position: relative;
 }
 
@@ -142,3 +142,5 @@
 		color: #ffdd40;
 	}
 }
+
+
