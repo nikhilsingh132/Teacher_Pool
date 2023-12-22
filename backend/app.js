@@ -5,6 +5,7 @@ require("./db/connection.js");
 const User = require("./db/user.js")
 const JobRole = require('./db/jobOpening.js')
 const cors = require("cors")
+const bcrypt = require("bcryptjs");
 
 //enable cors
 app.use(cors());
@@ -39,11 +40,17 @@ app.post('/login', async (req, res) => {
          return res.status(401).json({ message: "Email is not correct" });
       }
 
-      if (user.password !== password) {
-         return res.status(401).json({ message: "Password is not correct" });
-      }
+      // if (user.password !== password) {
+      //    return res.status(401).json({ message: "Password is not correct" });
+      // }
 
-      res.status(200).json({ message: "Login Successful", user });
+      // res.status(200).json({ message: "Login Successful", user });
+      const isPasswordMatch = await bcrypt.compare(password, user.password);
+        if (!isPasswordMatch) {
+            return res.status(401).json({ message: "Password is not correct" });
+        }
+
+        res.status(200).json({ message: "Login Successful", user });
    }
    catch (error) {
       res.status(500).json({ error: "Login failed" });
