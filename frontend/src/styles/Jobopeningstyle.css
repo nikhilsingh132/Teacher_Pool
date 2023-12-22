@@ -77,7 +77,7 @@ img {
 }
 
 /* Styling for the Apply button */
-.applybutton {
+ .applybutton {
     background-color: #4caf50;
     color: white;
     padding: 8px;
@@ -88,8 +88,22 @@ img {
     transition: background-color 0.3s ease-in-out;
 }
 
+.remove-button {
+  background-color: #c52020;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-left: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+
 button:hover {
-    background-color: #45a049;
+    background-color: #4592a0;
 }
 
 /* AddJobForm.css */

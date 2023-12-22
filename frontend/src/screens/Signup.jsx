@@ -16,7 +16,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://teacher-pool-backend-59rr.onrender.com/signup", {
+      await axios.post("http://localhost:8000/signup", {
         fullname,
         phone,
         email,

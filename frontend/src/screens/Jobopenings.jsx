@@ -87,7 +87,6 @@ const Jobopenings = () => {
   };
 
 
-
   const handleRemoveJob = async (jobOpening) => {
     try {
       console.log("hello nikhil")
@@ -128,6 +127,7 @@ const Jobopenings = () => {
       // Fetch updated job openings after adding a new job
       const response = await axios.get('https://teacher-pool-backend-59rr.onrender.com/get_job_openings');
       setJobOpenings(response.data);
+      console.log(response.data);
     } catch (error) {
       console.error('Error saving job:', error);
     }
@@ -183,18 +183,21 @@ const Jobopenings = () => {
               Apply
             </button>
             {isAdmin() && (
-              <button
-                className="remove-button"
-                onClick={() => handleRemoveJob(jobOpening)}
-              >
-                Remove
-              </button>
+              <>
+                <button
+                  className="remove-button"
+                  onClick={() => handleRemoveJob(jobOpening)}
+                >
+                  Remove
+                </button>
+              </>
             )}
           </div>
         ))}
       </div>
 
 
+     
       {showAddJobPopup && (
         <div className="add-job-popup">
           <p className='addjobtitle'>ADD JOB DESCRIPTION</p>
@@ -284,7 +287,7 @@ const Jobopenings = () => {
           </div>
         </div>
       )}
-      </>
+    </>
   );
 };
 
