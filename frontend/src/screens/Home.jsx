@@ -26,7 +26,7 @@ const Home = () => {
       <NavBar />
 
       <div className="herobanner">
-        <img className="imgteacherpool" src={herobanner} alt={"Introduction"} />
+        <img src={herobanner} alt={"Introduction"} />
         <h1>Search Talent for your School</h1>
         <span>
           Looking for Teaching, Non Teaching and Administrative staffs for your
@@ -43,7 +43,7 @@ const Home = () => {
         </Link>
       </div>
 
-      <div className="services" style={{ marginLeft: '20px', marginRight: '20px' }}>
+      <div className="services">
         <section className="bg-light py-3 py-md-5 py-xl-8">
           <div className="container overflow-hidden">
             <h1>Services</h1>
@@ -138,9 +138,9 @@ const Home = () => {
             </div>
           </div>
         </section>
-        
-        <section className="why-us" >
-          <div className="container" >
+
+        <section className="why-us">
+          <div className="container">
             <h1>Why Choose Us</h1>
 
             <div className="row">
@@ -226,7 +226,6 @@ const Home = () => {
           </div>
         </section>
       </div>
-
 
       <Element name="footer">
         <Footer />

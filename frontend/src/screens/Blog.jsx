@@ -6,6 +6,7 @@ import "../styles/Blog.css";
 
 const Blogs = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [filteredResults, setFilteredResults] = useState([]);
   const [searchInput, setSearchInput] = useState("");
@@ -27,14 +28,16 @@ const Blogs = () => {
       .catch((error) => {
         setError(error);
       })
-
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  // if (loading) return <div>Loading...</div>;
+  if (loading) return <div>Loading...</div>;
   if (error) return <div>Error!</div>;
 
   const searchItems = (searchValue) => {

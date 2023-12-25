@@ -91,11 +91,8 @@ h3 {
     color: #333;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 600px) {
     form {
-        min-width: 100%;
-    }
-    .loginphoto{
-      display: none;
+        max-width: 100%;
     }
 }

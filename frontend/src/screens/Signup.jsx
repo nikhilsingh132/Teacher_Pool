@@ -16,13 +16,13 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:8000/signup", {
+      const response = await axios.post("https://teacherpool-u1m9.onrender.com/signup", {
         fullname,
         phone,
         email,
         password,
       });
-      // console.log(response.data);
+      console.log(response.data.email);
       alert("Signed Up Successfully");
       navigate("/login");
     } catch (error) {
